@@ -7,6 +7,7 @@ import Register from './pages/Register'
 import Login from './pages/Login'
 import CreatePost from './pages/CreatePost'
 import AllPosts from './pages/AllPosts'
+import ViewPost from './pages/MyPost'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/create-post' element={<CreatePost />} />
           <Route path='/allposts' element={<AllPosts />} />
+          <Route path='/posts/:postId' element={<ViewPost />} />
         </Routes>
       </BrowserRouter>
     </>

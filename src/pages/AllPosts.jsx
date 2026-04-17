@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import UserContext from '../context/UserContext';
+import { Link } from 'react-router-dom';
 
 export default function AllPosts() {
   const { getAllPosts } = useContext(UserContext);
@@ -47,6 +48,12 @@ export default function AllPosts() {
                 <p>{post.commentsCount} Comments</p>
               </div>
             </div>
+
+            <Link to={`/posts/${post._id}`}>
+              <button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition">
+                View Post
+              </button>
+            </Link>
           </div>
         ))
       ) : (
