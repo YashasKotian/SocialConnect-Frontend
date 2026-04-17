@@ -16,11 +16,11 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Navigate to='/allposts' replace />} />
+          {/* <Route path='/' element={<Navigate to='/allposts' replace />} /> */}
           <Route path='/register' element={<Register />} />
-          <Route path='/login' element={<Login />} />
+          <Route path='/' element={<Login />} />
           <Route path='/create-post' element={<CreatePost />} />
-          <Route path='/allposts' element={<AllPosts />} />
+          {/* <Route path='/allposts' element={<AllPosts />} /> */}
           <Route path='/posts/:postId' element={<ViewPost />} />
         </Routes>
       </BrowserRouter>
