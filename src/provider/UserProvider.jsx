@@ -38,7 +38,7 @@ const userProvider = ({ children }) => {
         formData.append("media", file);
       });
 
-      const res = await axios.post(`${BaseUrl}post/create`, formData, {
+      const res = await axios.post(`${BaseUrl}/post/create`, formData, {
         headers: {  
           "Content-Type": "multipart/form-data",
         },
@@ -53,7 +53,7 @@ const userProvider = ({ children }) => {
 
   const getAllPosts = async () => {
     try {
-      const res = await axios.get(`${BaseUrl}post/all`);
+      const res = await axios.get(`${BaseUrl}/post/all`);
       return res.data;
     } catch (error) {
       console.log(error);
