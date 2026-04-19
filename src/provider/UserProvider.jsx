@@ -11,7 +11,7 @@ const userProvider = ({ children }) => {
     //global functions
     const handleRegister = async (data) => {
         try {
-            const res = await axios.post(`${BaseUrl}auth/register`, data)
+            const res = await axios.post(`${BaseUrl}/auth/register`, data)
             console.log(res)
         } catch (error) {
             console.log(error)
@@ -20,7 +20,7 @@ const userProvider = ({ children }) => {
 
     const handleLogin = async (data) => {
         try {
-            const res = await axios.post(`${BaseUrl}auth/login`, data)
+            const res = await axios.post(`${BaseUrl}/auth/login`, data)
             console.log(res)
         } catch (error) {
             console.log(error)
@@ -47,7 +47,7 @@ const userProvider = ({ children }) => {
       return res.data;
     } catch (error) {
       console.log(error);
-      throw error;x
+      throw error;
     }
   };
 
